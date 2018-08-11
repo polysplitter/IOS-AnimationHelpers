@@ -1,6 +1,8 @@
 import UIKit
 
 class CustomView: UIView {
+    let otherView = UIView()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         defaultInit()
@@ -12,6 +14,8 @@ class CustomView: UIView {
     }
     
     func defaultInit() {
-        self.backgroundColor = UIColor.blue
+        self.addSubview(otherView)
+        otherView.backgroundColor = .purple
+        self.backgroundColor = .blue
     }
 }
