@@ -16,6 +16,11 @@ class CustomView: UIView {
     func defaultInit() {
         self.addSubview(otherView)
         otherView.backgroundColor = .purple
+        otherView.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
         self.backgroundColor = .blue
+        
+        UIView.animate(withDuration: 2.0, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: [], animations: {
+            self.otherView.center = CGPoint(x: 250, y: 50)
+        }, completion: nil)
     }
 }
